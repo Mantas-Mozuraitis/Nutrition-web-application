@@ -1,0 +1,11 @@
+<body>
+    <h1>How much protein and carbs?</h1>
+    <form action="/get_nutrition" method="POST">
+        <input type="text" id="food" name="food" placeholder="Enter food, ingredient or dish" required>
+        <button type="submit">Calculate</button>
+    </form>
+    <p><%if(locals.output){%>
+        <img src="<%=output.photo.thumb%>" alt="food image">
+    <%}%>
+    </p>
+</body>
